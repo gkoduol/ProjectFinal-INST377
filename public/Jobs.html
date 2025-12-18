@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>EmpowerLink | Job Search for Her</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="jobs.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>EmpowerLink</h1>
+            <p>Discover new internships and early-career opporunities inclusive for women of color. </p>
+        </header>
+        <div class="search-section">
+            <form onsubmit="loadJobData(); return false;">
+                <input type="text" id="searchInput" placeholder="Keyword (e.g. intern)" required />
+                <input type="text" id="locationInput" placeholder="Location (e.g. New York)" required />
+                <button type="submit">Search Jobs</button>
+              </form>
+              
+        </div>
+        
+          <div id="results" class="results-section">
+            <!-- Job cards appear here -->
+          </div>
+    </body>
+</html>

@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
 
 const supabase = createClient(
@@ -13,6 +14,12 @@ const PORT = 3001;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../public')));
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/Jobs.html"));
+  });
+  
 
 app.get("/api/test", (req, res) => {
   res.json({ message: "Server is working!" });

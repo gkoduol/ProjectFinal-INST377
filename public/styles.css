@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #4b5bdc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .search-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .search-section input {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+  }
+  
+  .search-section button {
+    padding: 10px 20px;
+    background-color: #4b5bdc;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .results-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .job-card {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .job-card button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #4b5bdc;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
