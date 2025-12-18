@@ -1,7 +1,12 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const { createClient } = require('@supabase/supabase-js');
 
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);
 
 const app = express();
 const PORT = 3001;
@@ -45,6 +50,41 @@ app.get("/api/jobs", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch jobs" });
   }
 });
+// post endpoint to save a job to supabase
+app.post('/api/saved-jobs', async (req, res) => {
+    const { title, company, location, url } = req.body;
+  
+    const { data, error } = await supabase
+      .from('saved_jobs')
+      .insert([
+        { title, company, location, url }
+      ])
+      .select();
+  
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to save job' });
+      return;
+    }
+  
+    res.json(data);
+  });
+//  get endpoint to fetch saved jobs from supabase
+  app.get('/api/saved-jobs', async (req, res) => {
+    const { data, error } = await supabase
+      .from('saved_jobs')
+      .select();
+  
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to fetch saved jobs' });
+      return;
+    }
+  
+    res.json(data);
+  });
+  
+  
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
