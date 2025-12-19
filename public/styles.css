@@ -53,4 +53,56 @@ body {
     border: none;
     cursor: pointer;
   }
+
+  /* table for Jobs (home page) */
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #4b5bdc;
+    color: white;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #eef0ff;
+  }
+  
+  td a {
+    color: #4b5bdc;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  td a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    padding: 6px 12px;
+    background-color: #4b5bdc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  button:hover {
+    background-color: #3a47b5;
+  }
   
