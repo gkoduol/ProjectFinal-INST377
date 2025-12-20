@@ -2,6 +2,7 @@
     <head>
         <title>EmpowerLink | Saved Jobs</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="Saved.js" defer></script>
     </head>
     <body>
@@ -12,8 +13,16 @@
             <a href="/About.html">About</a> |
             <a href="/Jobs.html">Home</a> |
             <a href="/Saved.html">Saved Jobs</a> 
-        </header>
-
-        <h1><h1>Saved Jobs</h1></h1>
+        </header>        
+        
+        <h1 style="text-align: center;">Saved Jobs</h1>
+        <!-- Table will be inserted here -->
+        <div id="saved-results"></div>
+        <!--Chart for saved jobs by Location  -->
+        <div class="page-header">
+            <h3 style="text-align: center;">By Location</h3>
+          </div>
+          
+          <canvas id="jobsChart" width="400" height="200"></canvas>  
     </body>
 </html>

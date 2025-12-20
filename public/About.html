@@ -2,6 +2,7 @@
     <head>
         <title>EmpowerLink | About Us</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.css">
     </head>
     <body>
         <!-- navigation -->
@@ -12,23 +13,39 @@
             <a href="/Jobs.html">Home</a> |
             <a href="/Saved.html">Saved Jobs</a> 
         </header>
+        <!-- Page header -->
         <div class="page-header">
-            <h1>About EmpowerLink</h1>
+            <h1 style="text-align: center;">About Page</h1>
         </div>
-        <!-- About Content -->
-         <div class="about-content">
-            <p>
-                EmpowerLink is a job search web application designed to support women of color as they explore internships and early-career opportunities. While the job listings themselves are sourced from publicly available postings, the platform is built with an intentional focus on accessibility, organization, and user experience.
-              </p>
-          
-              <p>
-                The goal of EmpowerLink is not to limit opportunities, but to provide a space where users can search, review, and save opportunities in a way that feels empowering and manageable. By centralizing job search functionality and allowing users to bookmark roles of interest, the platform encourages thoughtful career exploration.
-              </p>
-          
-              <p>
-                This project was created as part of an academic course to demonstrate full-stack web development skills, including frontend design, backend API development, and database integration.
-              </p>
-         </div>
-        
+
+        <div class="about-slider" data-simple-slider>
+            <!-- Purpose slide -->
+            <div>
+                <h2>Purpose</h2>
+                <p>EmpowerLink is a job search platform designed to support women of color navigating early career opportunities.</p>
+            </div>
+            <!-- Why slide -->
+            <div>
+                <h2>Why It Exists</h2>
+                <p>Women of color often face barriers in career access, visibility, and representation. This platform centers their experience.</p>
+            </div>
+            <!-- What slide -->
+            <div>
+                <h2>What It Does</h2>
+                <p>EmpowerLink aggregates public job listings and provides tools to save and organize opportunities.</p>
+            </div>
+            <!-- Future slide -->
+            <div>
+                <h2>Future Vision</h2>
+                <p>Future versions may include curated resources, mentorship links, and community-driven features.</p>
+            </div>
+        </div>
+        <!-- Slider implementation -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+         <script>
+            simpleslider.getSlider({
+                delay: 4
+            });
+         </script>
     </body>
 </html>
