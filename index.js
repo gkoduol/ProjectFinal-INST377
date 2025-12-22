@@ -1,7 +1,4 @@
-let fetch;
-(async () => {
-  fetch = (await import('node-fetch')).default;
-})();
+const fetch = (...args) => import('node-fetch').then(module => module.default(...args));
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
