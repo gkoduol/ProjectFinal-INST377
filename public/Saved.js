@@ -89,7 +89,7 @@ async function loadSavedJobs() {
           {
             label: 'Saved Jobs',
             data: data,
-            backgroundColor: '#4b5bdc',
+            backgroundColor: '#b56576',
           },
         ],
       },
@@ -100,6 +100,16 @@ async function loadSavedJobs() {
             display: false,
           },
         },
+        // to bold the labels for the chart
+        scales: {
+          x: {
+            ticks: {
+              font: {
+                weight: 'bold'
+              }
+            }
+          }
+        }
       },
     });
   }
@@ -107,4 +117,3 @@ async function loadSavedJobs() {
   
   
   window.onload = loadSavedJobs;
-  
