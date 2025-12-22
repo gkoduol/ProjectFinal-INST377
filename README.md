@@ -16,4 +16,4 @@ Safari (desktop)
 (Leave blank for now, add Vercel link later)
 
 **Developer Manual:**
-Link to /docs/DeveloperManual.md (create this later)
+Link to /docs/developer-manual.md
