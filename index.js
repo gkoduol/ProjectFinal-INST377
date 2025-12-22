@@ -1,4 +1,7 @@
-const fetch = require('node-fetch');
+let fetch;
+(async () => {
+  fetch = (await import('node-fetch')).default;
+})();
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -96,4 +99,3 @@ app.post('/api/saved-jobs', async (req, res) => {
   });
 
   module.exports = app;
-
